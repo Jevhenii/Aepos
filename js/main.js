@@ -12,13 +12,13 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A'],
+  sectionsColor: ['#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: true,
   slidesNavigation: true,
   controlArrows: false,
-  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
+  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixSection'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
