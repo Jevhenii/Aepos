@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/fullpage.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+<main>
+    <header>
+        <div class="header-top clearfix">
+            <h1 class="l-left"><a href="#firstSection"><img src="css/img/applicature-logo-1.png" alt=""
+                                                            style="padding-top: 25px;"></a></h1>
+            <a class="l-right toggle-menu" href="#">
+                <i></i>
+                <i></i>
+                <i></i>
+            </a>
+        </div>
+
+        <nav class="hide">
+            <ul id="menu">
+                <li data-menuanchor="firstSection">
+                    <a href="#firstSection" title="First Section">Home</a>
+                </li>
+                <li data-menuanchor="secondSection">
+                    <a href="#secondSection" title="Second Section">What is AEPoS?</a>
+                </li>
+                <li data-menuanchor="thirdSection">
+                    <a href="#thirdSection" title="Second Section">Benefits</a>
+                </li>
+                <li data-menuanchor="fourthSection">
+                    <a href="#fourthSection" title="Fourth Section">Contact Us</a>
+                </li>
+                <li data-menuanchor="fifthSection">
+                    <a href="#fifthSection" title="First Slide">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="fullpage">
+        <section class="vertical-scrolling logo-head">
+            <div class="logo wow fadeIn" data-wow-duration="4s">
+                <img src="css/img/Group 88.svg" alt="Sorry">
+            </div>
+            <div class="scroll-icon">
+                <p>Jump into the last slide</p>
+                <a href="#fifthSection/1" class="icon-up-open-big"></a>
+            </div>
+        </section>
+        <section class="vertical-scrolling description">
+            <canvas id="canvas-descr" width="2000" height="1700"></canvas>
+            <p class="description_text">
+                AEPoS Is a lightweight Ethereum-based <br>
+                blockchain solution with the ecological <br>
+                Proof of Stake consenus suitable for <br>
+                financial, supply chain, healthcare and <br> other industries.
+            </p>
+        </section>
+        <section class="vertical-scrolling">
+            <div class="hero" class="canvas-wrap">
+                <canvas id="canvas" width="2000" height="1200"></canvas>
+                <script>
+                    // function for Fixing HTML5 2d Canvas Blur
+                    let canvas = document.getElementById('canvas'),
+                        ctx = canvas.getContext('2d'),
+                        dtx = canvas.getContext('2d'),
+                        etx = canvas.getContext('2d'),
+                        dpi = window.devicePixelRatio;
+
+                    function fix_dpi() {
+                        let style = {
+                            height() {
+                                return +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
+                            },
+                            width() {
+                                return +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
+                            }
+                        }
+                        canvas.setAttribute('width', style.width() * dpi);
+                        canvas.setAttribute('height', style.height() * dpi);
+                    }
+
+                    // function for Fixing HTML5 2d Canvas Blur
+                    function draw() {
+                        //call the dpi fix every time
+                        //canvas is redrawn
+                        fix_dpi();
+                        //draw stuff!
+                        // top-left
+                        ctx.setLineDash([6, 4, 2, 4]);
+                        ctx.beginPath();
+                        ctx.moveTo(40, 290);
+                        ctx.strokeStyle = '#ffffff';
+                        ctx.lineTo(1200, 600);
+                        ctx.stroke();
+                        // bottom-left
+                        dtx.setLineDash([6, 4, 2, 4]);
+                        dtx.beginPath();
+                        dtx.moveTo(40, 600);
+                        dtx.strokeStyle = '#ffffff';
+                        dtx.lineTo(1230, 290);
+                        dtx.stroke();
+                        // center
+                        etx.setLineDash([6, 4, 2, 4]);
+                        etx.beginPath();
+                        etx.moveTo(624, 0);
+                        etx.strokeStyle = '#ffffff';
+                        etx.lineTo(624, 1000);
+                        etx.stroke();
+                        requestAnimationFrame(draw);
+                    }
+
+                    requestAnimationFrame(draw);
+
+                    var aspectRatio = 1.5;    // height:width = 3:2
+                    canvas.height = canvas.width * aspectRatio;
+                </script>
+                <div class="hero-descr_wrapper">
+                    <p class="description_text">Lightweight <br> industry networks</p>
+                    <span class="helper"></span>
+                    <p class="description_text">Some smart <br> contracts, your <br> control over speed <br> and
+                        fees</p>
+                </div>
+                <div>
+                    <img id="main-banner" style="width: 300px; height: 400px; padding-top: 50px; padding-right: 1px;"
+                         src="css/img/Group 72.svg" alt="Sorry">
+                </div>
+                <div class="hero-descr_wrapper">
+                    <p class="description_text">Customizable UI <br> wallets</p>
+                    <span class="helper"></span>
+                    <p class="description_text">Enterprise <br> level <br> support</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="vertical-scrolling link-wrapper">
+            <canvas id="canvas-link" width="2000" height="1500"></canvas>
+            <script>
+                let canvas_link = document.getElementById('canvas-link'),
+                    xtx = canvas_link.getContext('2d'),
+                    ytx = canvas_link.getContext('2d'),
+                    dpz = window.devicePixelRatio;
+
+                function fix_dpz() {
+                    let style = {
+                        height() {
+                            return +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
+                        },
+                        width() {
+                            return +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
+                        }
+                    }
+                    canvas_link.setAttribute('width', style.width() * dpz);
+                    canvas_link.setAttribute('height', style.height() * dpz);
+                }
+
+                // function for Fixing HTML5 2d Canvas Blur
+                function draw() {
+//call the dpi fix every time 
+//canvas is redrawn
+                    fix_dpz();
+//draw stuff!
+
+// center-top
+                    xtx.setLineDash([6, 4, 2, 4]);
+                    xtx.beginPath();
+                    xtx.moveTo(624, 0);
+                    xtx.strokeStyle = '#ffffff';
+                    xtx.lineTo(624, 335);
+                    xtx.stroke();
+// center-bottom   
+                    ytx.setLineDash([6, 4, 2, 4]);
+                    ytx.beginPath();
+                    ytx.moveTo(624, 400);
+                    ytx.strokeStyle = '#ffffff';
+                    ytx.lineTo(624, 500);
+                    ytx.stroke();
+                    requestAnimationFrame(draw);
+                }
+
+                requestAnimationFrame(draw);
+
+                var aspectRatio = 1.5;    // height:width = 3:2
+                canvas_link.height = canvas_link.width * aspectRatio;
+            </script>
+            <div class="link-group">
+                <a href="#" class="link_contact hvr-bounce-to-right">github</a>
+                <a href="#" class="link_contact hvr-bounce-to-right">talk to dev team</a>
+            </div>
+        </section>
+        <section id="nav_menu-6" class="vertical-scrolling widget widget_nav_menu">
+            <div class="menu-main-navigation-container">
+                <ul id="menu-main-navigation-1" class="menu">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9">
+                        <a href="#" itemprop="url"><span>Why did you start AEPoS?</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a
+                                    href="#" itemprop="url">
+                                We receive a lot of requests for Ethereum based networks with customizations on the
+                                consensus protocol, throughput and gas modifications and wallet customizations.
+                                Back in October 2017 together with the community of Auxilium, who are the altruistic
+                                decentralized network, we decided to migrate the network from old Bitcoin based
+                                implementation with Proof of Stake and coin-age idea borrowed from Peercoin.
+
+                                With further development of AEPoS we are solving the problems that many industry
+                                projects: infrastructure complexity, wallets customization, transaction fees
+                                customizations, transactions throughput and many others.
+
+                                AEPoS provides enterprises, startups and communities with the solution and level of
+                                support that makes deployment of proprietary networks pain-free and smooth.
+
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13">
+                        <a href="#" itemprop="url"> <span>Are you trying to supercede Ethereum?</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a
+                                    href="#" itemprop="url">
+                                We receive a lot of requests for Ethereum based networks with customizations on the
+                                consensus protocol, throughput and gas modifications and wallet customizations.
+                                Back in October 2017 together with the community of Auxilium, who are the altruistic
+                                decentralized network, we decided to migrate the network from old Bitcoin based
+                                implementation with Proof of Stake and coin-age idea borrowed from Peercoin.
+
+                                With further development of AEPoS we are solving the problems that many industry
+                                projects: infrastructure complexity, wallets customization, transaction fees
+                                customizations, transactions throughput and many others.
+
+                                AEPoS provides enterprises, startups and communities with the solution and level of
+                                support that makes deployment of proprietary networks pain-free and smooth.
+
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-16">
+                        <a href="#" itemprop="url"><span>How is PoS better than PoW?</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a
+                                    href="#" itemprop="url">
+                                We receive a lot of requests for Ethereum based networks with customizations on the
+                                consensus protocol, throughput and gas modifications and wallet customizations.
+                                Back in October 2017 together with the community of Auxilium, who are the altruistic
+                                decentralized network, we decided to migrate the network from old Bitcoin based
+                                implementation with Proof of Stake and coin-age idea borrowed from Peercoin.
+
+                                With further development of AEPoS we are solving the problems that many industry
+                                projects: infrastructure complexity, wallets customization, transaction fees
+                                customizations, transactions throughput and many others.
+
+                                AEPoS provides enterprises, startups and communities with the solution and level of
+                                support that makes deployment of proprietary networks pain-free and smooth.
+
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-16">
+                        <a href="#" itemprop="url"><span>Why have you chosen PoS over DPoS?</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a
+                                    href="#" itemprop="url">
+                                We receive a lot of requests for Ethereum based networks with customizations on the
+                                consensus protocol, throughput and gas modifications and wallet customizations.
+                                Back in October 2017 together with the community of Auxilium, who are the altruistic
+                                decentralized network, we decided to migrate the network from old Bitcoin based
+                                implementation with Proof of Stake and coin-age idea borrowed from Peercoin.
+
+                                With further development of AEPoS we are solving the problems that many industry
+                                projects: infrastructure complexity, wallets customization, transaction fees
+                                customizations, transactions throughput and many others.
+
+                                AEPoS provides enterprises, startups and communities with the solution and level of
+                                support that makes deployment of proprietary networks pain-free and smooth.
+
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-16">
+                        <a href="#" itemprop="url"><span>What are the current issues with the </span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a
+                                    href="#" itemprop="url">
+                                We receive a lot of requests for Ethereum based networks with customizations on the
+                                consensus protocol, throughput and gas modifications and wallet customizations.
+                                Back in October 2017 together with the community of Auxilium, who are the altruistic
+                                decentralized network, we decided to migrate the network from old Bitcoin based
+                                implementation with Proof of Stake and coin-age idea borrowed from Peercoin.
+
+                                With further development of AEPoS we are solving the problems that many industry
+                                projects: infrastructure complexity, wallets customization, transaction fees
+                                customizations, transactions throughput and many others.
+
+                                AEPoS provides enterprises, startups and communities with the solution and level of
+                                support that makes deployment of proprietary networks pain-free and smooth.
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <img class="footer-logo" src="css/img/applicature-logo-1.png" alt="">
+            </footer>
+        </section>
+    </div>
+</main>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script src="js/main.js"></script>
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "applicature",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jevhenii",
+  "license": "OPEN-SOURCE-GPLV3-LICENSE",
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "fullpage.js": "^3.0.1",
+    "hover.css": "^2.3.2",
+    "wow.js": "^1.2.2"
+  }
+}
