@@ -542,9 +542,11 @@ footer img {
 
 #canvas {
     position: absolute;
-    width: 1000px;
+    width: 60%;
     height: 720px;
     display: block;
+    margin: 0 auto;
+    /* border: 1px solid white; */
 }
 
 .description {
@@ -555,13 +557,14 @@ footer img {
 
 #canvas-descr {
     position: absolute;
-    width: 1000px;
+    width: 60%;
     height: 850px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
+    margin: 0 auto;
+    /* border: 1px solid white; */
 }
 
 .link-wrapper {
@@ -572,11 +575,12 @@ footer img {
 
 #canvas-link {
     position: absolute;
-    width: 1000px;
+    width: 60%;
     height: 750px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+    /* border: 1px solid white; */
 }

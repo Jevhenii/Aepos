@@ -110,16 +110,16 @@ fix_dp();
 // top-left
 atx.setLineDash([6, 4, 2, 4]);
 atx.beginPath();
-atx.moveTo(624, 30);
+atx.moveTo(575, 0);
 atx.strokeStyle = '#ffffff';
-atx.lineTo(624, 360);
+atx.lineTo(575, 330);
 atx.stroke();
 // center   
 btx.setLineDash([6, 4, 2, 4]);
 btx.beginPath();
-btx.moveTo(624, 540);
+btx.moveTo(575, 450);
 btx.strokeStyle = '#ffffff';
-btx.lineTo(624, 850);
+btx.lineTo(575, 850);
 btx.stroke();
 requestAnimationFrame(draw);
 }

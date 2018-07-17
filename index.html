@@ -51,7 +51,7 @@
             </div>
         </section>
         <section class="vertical-scrolling description">
-            <canvas id="canvas-descr" width="2000" height="1700"></canvas>
+            <canvas id="canvas-descr" width="100%" height=100%></canvas>
             <p class="description_text">
                 AEPoS Is a lightweight Ethereum-based <br>
                 blockchain solution with the ecological <br>
@@ -61,7 +61,7 @@
         </section>
         <section class="vertical-scrolling">
             <div class="hero" class="canvas-wrap">
-                <canvas id="canvas" width="2000" height="1200"></canvas>
+                <canvas id="canvas" width="100%" height="100%"></canvas>
                 <script>
                     // function for Fixing HTML5 2d Canvas Blur
                     let canvas = document.getElementById('canvas'),
@@ -92,23 +92,23 @@
                         // top-left
                         ctx.setLineDash([6, 4, 2, 4]);
                         ctx.beginPath();
-                        ctx.moveTo(40, 290);
+                        ctx.moveTo(0, 240);
                         ctx.strokeStyle = '#ffffff';
-                        ctx.lineTo(1200, 600);
+                        ctx.lineTo(1150, 650);
                         ctx.stroke();
                         // bottom-left
                         dtx.setLineDash([6, 4, 2, 4]);
                         dtx.beginPath();
-                        dtx.moveTo(40, 600);
+                        dtx.moveTo(0, 600);
                         dtx.strokeStyle = '#ffffff';
-                        dtx.lineTo(1230, 290);
+                        dtx.lineTo(1150, 280);
                         dtx.stroke();
                         // center
                         etx.setLineDash([6, 4, 2, 4]);
                         etx.beginPath();
-                        etx.moveTo(624, 0);
+                        etx.moveTo(568, 0);
                         etx.strokeStyle = '#ffffff';
-                        etx.lineTo(624, 1000);
+                        etx.lineTo(568, 1000);
                         etx.stroke();
                         requestAnimationFrame(draw);
                     }
@@ -125,7 +125,7 @@
                         fees</p>
                 </div>
                 <div>
-                    <img id="main-banner" style="width: 300px; height: 400px; padding-top: 50px; padding-right: 1px;"
+                    <img id="main-banner" style="width: 300px; padding-top: 50px;"
                          src="css/img/Group 72.svg" alt="Sorry">
                 </div>
                 <div class="hero-descr_wrapper">
@@ -137,7 +137,7 @@
         </section>
 
         <section class="vertical-scrolling link-wrapper">
-            <canvas id="canvas-link" width="2000" height="1500"></canvas>
+            <canvas id="canvas-link" width="100%" height="100%"></canvas>
             <script>
                 let canvas_link = document.getElementById('canvas-link'),
                     xtx = canvas_link.getContext('2d'),
@@ -167,16 +167,16 @@
 // center-top
                     xtx.setLineDash([6, 4, 2, 4]);
                     xtx.beginPath();
-                    xtx.moveTo(624, 0);
+                    xtx.moveTo(575, 0);
                     xtx.strokeStyle = '#ffffff';
-                    xtx.lineTo(624, 335);
+                    xtx.lineTo(575, 335);
                     xtx.stroke();
 // center-bottom   
                     ytx.setLineDash([6, 4, 2, 4]);
                     ytx.beginPath();
-                    ytx.moveTo(624, 400);
+                    ytx.moveTo(575, 400);
                     ytx.strokeStyle = '#ffffff';
-                    ytx.lineTo(624, 500);
+                    ytx.lineTo(575, 500);
                     ytx.stroke();
                     requestAnimationFrame(draw);
                 }
