@@ -6,6 +6,7 @@ img {
     height: auto;
 }
 
+
 .icon-up-open-big:after {
     content: "^";
     font-size: 2.5em;
@@ -247,7 +248,8 @@ section {
 
 .description_text {
     text-transform: none;
-    font-size: 1.5em;
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -286,6 +288,7 @@ h3 {
 #main-banner {
     max-width: 100%;
     width: 300px;
+    padding-top: 50px;
     padding-right: 15px;
     height: auto;
     position: relative;
@@ -299,7 +302,7 @@ h3 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 20em;
+    height: 180px;
     justify-content: space-between;
 }
 
@@ -307,22 +310,10 @@ h3 {
     padding: 1.5em;
     border: 1px solid white;
     border-radius: 7px;
-    display: block;
     width: 200px;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
-.link_contact::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 45%;
-    bottom: 45%;
-    border: none;
-    border-radius: 7px;
-}
 
 footer img {
     position: absolute;
@@ -522,7 +513,7 @@ footer img {
     height: 720px;
     display: block;
     margin: 0 auto;
-    /* border: 1px solid white; */
+    
 }
 
 .description {
