@@ -193,7 +193,6 @@ nav {
 }
 
 nav ul {
-    padding: 0 10px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -262,7 +261,15 @@ h2 {
     font-size: 4em;
     margin-bottom: 20px;
 }
-
+.description-text {
+    font-size: 1.2em;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-transform: none;
+    font-size: 1.2em;
+}
 h3 {
     font-weight: 300;
     font-size: 2.8em;
@@ -278,6 +285,9 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.vertical-scrolling .hero .hero-descr_wrapper .description_text {
+    font-size: 1.2em;
 }
 
 .hero-descr_wrapper {
@@ -424,6 +434,28 @@ footer img {
         -ms-flex-direction: column;
         flex-direction: column;
     }
+    .toggle-menu {
+        top: -60px;
+    }
+    .vertical-scrolling .hero {
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .link_contact {
+        font-size: 1em;
+        width: 150px;
+    }
+    #main-banner {
+        width: 100px;
+        padding: 30px 0;
+    }
+    .helper {
+        margin: 15px 0;
+    }
+    .widget_nav_menu .menu .menu-item span {
+        font-size: 1em;
+        margin-left: 0.5em;
+    }
 
     nav li {
         margin-top: 1px;
@@ -436,24 +468,60 @@ footer img {
     .scroll-icon {
         display: none;
     }
+    canvas, #canvas, #canvas-descr, #canvas-link  {
+        display: none;
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: 1px solid white;
+        background: inherit;
+    }
+    #canvas {
+        display: none;
+    }
 }
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 320px) {
+    .widget_nav_menu .menu .menu-item span {
+        font-size: 1em;
+        margin-left: 0;
+    }
+    
+    .description_text {
+        font-size: 1.2em;
+    }
+    .vertical-scrolling .hero {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 425px) {
     html {
-        font-size: 80%;
+        font-size: 50%;
     }
 
     .open-menu ~ nav {
         padding: 20px 0;
     }
-
+    .vertical-scrolling .hero {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+    .link_contact {
+        font-size: 1em;
+        width: 150px;
+    }
+    #main-banner {
+        width: 100px;
+        padding: 30px 0;
+    }
+    .helper {
+        margin: 15px 0;
+    }
     nav li a {
         padding: 3px;
     }
 }
 
 /*hover*/
-
 .hvr-bounce-to-right {
     display: inline-block;
     vertical-align: middle;
