@@ -12,9 +12,9 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
+  licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
   sectionsColor: ['#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A'],
   sectionSelector: '.vertical-scrolling',
-  slideSelector: '.horizontal-scrolling',
   navigation: true,
   slidesNavigation: true,
   controlArrows: false,
@@ -82,51 +82,4 @@ $(document).ready(function() {
   });
 
 });
-
-// Mooooooree canvas ^_____^
-
-let canvas_descr = document.getElementById('canvas-descr'),
-atx = canvas_descr.getContext('2d'),
-btx = canvas_descr.getContext('2d'),
-dp = window.devicePixelRatio;
-function fix_dp() {
-let style = {
-    height() {
-    return +getComputedStyle(canvas).getPropertyValue('height').slice(0,-2);
-    },
-    width() {
-    return +getComputedStyle(canvas).getPropertyValue('width').slice(0,-2);
-    }
-}
-canvas_descr.setAttribute('width', style.width() * dp);
-canvas_descr.setAttribute('height', style.height() * dp);
-}
-// function for Fixing HTML5 2d Canvas Blur 
-function draw() {
-//call the dpi fix every time 
-//canvas is redrawn
-fix_dp();
-//draw stuff!
-// top-left
-atx.setLineDash([6, 4, 2, 4]);
-atx.beginPath();
-atx.moveTo(575, 0);
-atx.strokeStyle = '#ffffff';
-atx.lineTo(575, 330);
-atx.stroke();
-// center   
-btx.setLineDash([6, 4, 2, 4]);
-btx.beginPath();
-btx.moveTo(575, 450);
-btx.strokeStyle = '#ffffff';
-btx.lineTo(575, 850);
-btx.stroke();
-requestAnimationFrame(draw);
-}
-requestAnimationFrame(draw);
-
-var aspectRatio = 1.5;    // height:width = 3:2
-canvas_descr.height = canvas_descr.width * aspectRatio;
-
-// Mooooooree canvas ^_____^
 

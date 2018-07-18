@@ -54,18 +54,64 @@
                 <a href="#sixSection/1" class="icon-up-open-big"></a>
             </div>
         </section>
-        <section class="vertical-scrolling description">
-            <canvas id="canvas-descr" width="100%" height=100%></canvas>
+        <section class="vertical-scrolling">
+        <div class="description">
+            <canvas id="canvas-descr"></canvas>
+            <script>
+                let canvas_descr = document.getElementById('canvas-descr'),
+                atx = canvas_descr.getContext('2d'),
+                btx = canvas_descr.getContext('2d'),
+                dp = window.devicePixelRatio;
+                function fix_dp() {
+                let style = {
+                    height() {
+                    return +getComputedStyle(canvas).getPropertyValue('height').slice(0,-2);
+                    },
+                    width() {
+                    return +getComputedStyle(canvas).getPropertyValue('width').slice(0,-2);
+                    }
+                }
+                canvas_descr.setAttribute('width', style.width() * dp);
+                canvas_descr.setAttribute('height', style.height() * dp);
+                }
+                // function for Fixing HTML5 2d Canvas Blur 
+                function draw() {
+                //call the dpi fix every time 
+                //canvas is redrawn
+                fix_dp();
+                //draw stuff!
+                // top-left
+                atx.setLineDash([6, 4, 2, 4]);
+                atx.beginPath();
+                atx.moveTo(568, 0);
+                atx.strokeStyle = '#ffffff';
+                atx.lineTo(568, 400);
+                atx.stroke();
+                // center   
+                btx.setLineDash([6, 4, 2, 4]);
+                btx.beginPath();
+                btx.moveTo(568, 520);
+                btx.strokeStyle = '#ffffff';
+                btx.lineTo(568, 920);
+                btx.stroke();
+                requestAnimationFrame(draw);
+                }
+                requestAnimationFrame(draw);
+
+                var aspectRatio = 1.5;    // height:width = 3:2
+                canvas_descr.height = canvas_descr.width * aspectRatio;
+            </script>
             <p class="description_text">
                 AEPoS Is a lightweight Ethereum-based <br>
                 blockchain solution with the ecological <br>
                 Proof of Stake consenus suitable for <br>
                 financial, supply chain, healthcare and <br> other industries.
             </p>
+        </div>
         </section>
         <section class="vertical-scrolling">
             <div class="hero" class="canvas-wrap">
-                <canvas id="canvas" width="100%" height="100%"></canvas>
+                <canvas id="canvas"></canvas>
                 <script>
                     // function for Fixing HTML5 2d Canvas Blur
                     let canvas = document.getElementById('canvas'),
@@ -89,11 +135,7 @@
 
                     // function for Fixing HTML5 2d Canvas Blur
                     function draw() {
-                        //call the dpi fix every time
-                        //canvas is redrawn
                         fix_dpi();
-                        //draw stuff!
-                        // top-left
                         ctx.setLineDash([6, 4, 2, 4]);
                         ctx.beginPath();
                         ctx.moveTo(40, 255);
@@ -112,20 +154,19 @@
                         etx.beginPath();
                         etx.moveTo(568, 0);
                         etx.strokeStyle = '#ffffff';
-                        etx.lineTo(568, 1000);
+                        etx.lineTo(568, 900);
                         etx.stroke();
                         requestAnimationFrame(draw);
                     }
 
                     requestAnimationFrame(draw);
-
                     var aspectRatio = 1.5;    // height:width = 3:2
                     canvas.height = canvas.width * aspectRatio;
                 </script>
                 <div class="hero-descr_wrapper">
-                    <p class="description_text">Lightweight <br> industry networks</p>
+                    <p class="description_text" id="one">Lightweight <br> industry networks</p>
                     <span class="helper"></span>
-                    <p class="description_text">Some smart <br> contracts, your <br> control over speed <br> and
+                    <p class="description_text" id="one">Some smart <br> contracts, your <br> control over speed <br> and
                         fees</p>
                 </div>
                 <div class="main-banner-wrapper">
@@ -140,8 +181,9 @@
             </div>
         </section>
 
-        <section class="vertical-scrolling link-wrapper">
-            <canvas id="canvas-link" width="100%" height="100%"></canvas>
+        <section class="vertical-scrolling">
+        <div class="link-wrapper">
+            <canvas id="canvas-link"></canvas>
             <script>
                 let canvas_link = document.getElementById('canvas-link'),
                     xtx = canvas_link.getContext('2d'),
@@ -163,30 +205,23 @@
 
                 // function for Fixing HTML5 2d Canvas Blur
                 function draw() {
-//call the dpi fix every time 
-//canvas is redrawn
                     fix_dpz();
-//draw stuff!
-
-// center-top
                     xtx.setLineDash([6, 4, 2, 4]);
                     xtx.beginPath();
-                    xtx.moveTo(575, 0);
+                    xtx.moveTo(568, 0);
                     xtx.strokeStyle = '#ffffff';
-                    xtx.lineTo(575, 335);
+                    xtx.lineTo(568, 340);
                     xtx.stroke();
 // center-bottom   
                     ytx.setLineDash([6, 4, 2, 4]);
                     ytx.beginPath();
-                    ytx.moveTo(575, 400);
+                    ytx.moveTo(568, 410);
                     ytx.strokeStyle = '#ffffff';
-                    ytx.lineTo(575, 500);
+                    ytx.lineTo(568, 520);
                     ytx.stroke();
                     requestAnimationFrame(draw);
                 }
-
                 requestAnimationFrame(draw);
-
                 var aspectRatio = 1.5;    // height:width = 3:2
                 canvas_link.height = canvas_link.width * aspectRatio;
             </script>
@@ -194,6 +229,7 @@
                 <a href="#" class="link_contact hvr-bounce-to-right">github</a>
                 <a href="#" class="link_contact hvr-bounce-to-right">talk to dev team</a>
             </div>
+        </div>
         </section>
         <section id="nav_menu-6" class="vertical-scrolling widget widget_nav_menu">
             <div class="menu-main-navigation-container">
