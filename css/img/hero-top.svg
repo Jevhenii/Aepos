@@ -1,0 +1,8 @@
+<svg 
+viewBox="0 0 1000 1000"
+version="1.1" xmlns="http://www.w3.org/2000/svg" 
+height="100%" width="100%"
+preserveAspectRatio="none">
+  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="20" x2="500" y2="400" style="stroke:rgb(255,255,255);stroke-width:0.5"></line>
+  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="600" x2="500" y2="1000" style="stroke:rgb(255,255,255);stroke-width:0.5"></line>
+</svg>

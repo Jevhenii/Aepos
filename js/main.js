@@ -8,7 +8,7 @@ $header_top.find('a').on('click', function() {
   $(this).parent().toggleClass('open-menu');
 });
 
-
+  var $isAnimatedSecond = $('.second .is-animated');
 
 // fullpage customization
 $('#fullpage').fullpage({
@@ -17,9 +17,10 @@ $('#fullpage').fullpage({
   sectionSelector: '.vertical-scrolling',
   navigation: true,
   slidesNavigation: true,
-  controlArrows: false,
+  controlArrows: true,
   anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixSection'],
   menu: '#menu',
+
 
   afterLoad: function(anchorLink, index) {
     $header_top.css('background', '#9E2F41');
@@ -27,12 +28,6 @@ $('#fullpage').fullpage({
     if (index == 5) {
         $('#fp-nav').hide();
       }
-  },
-
-  onLeave: function(index, nextIndex, direction) {
-    if(index == 5) {
-      $('#fp-nav').show();
-    }
   },
 
   afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
@@ -62,10 +57,9 @@ $('#fullpage').fullpage({
   } 
 });
 
-$(document).ready(function() { 
+$(document).ready(function() {
   menu_link = $('.widget_nav_menu .menu .menu-item-has-children a'),
   sub_menu = $('.widget_nav_menu .menu li .sub-menu');   
-  
   menu_link.on('click', function() {   
     
     if (!$(this).hasClass('active')) {
@@ -82,4 +76,7 @@ $(document).ready(function() {
   });
 
 });
+
+
+  
 
