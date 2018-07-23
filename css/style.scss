@@ -105,12 +105,20 @@
     position: relative;
   }
   .vertical-scrolling .description { 
-    @include flex-centering;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &::before {
       content: '';
       background-image: url('./img/hero-top.svg');
       background-size: 100% 100%;
-      @include svg-wrapper;
+      position: absolute;
+      display: block;
+      top: 0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       height: 110%;
       width: 100%;
     }  
@@ -141,7 +149,9 @@
   }
   
  .logo {
-   @include flex-centering;
+  display: flex;
+  justify-content: center;
+  align-items: center;
    img {
     width: 30%;
     position: absolute;
@@ -155,7 +165,7 @@
       display: block;
       width: 55%; 
       top: 0;
-      left:-2px;
+      left: 0;
       right: 0;
       bottom: 0;
       margin: auto;
@@ -172,7 +182,13 @@
       content: '';
       background-image: url('./img/hero-center.svg');
       background-size: 100% 100%;
-      @include svg-wrapper;
+      position: absolute;
+  display: block; 
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
       height: 100%;
       width: 55%;
     }
@@ -201,18 +217,21 @@
   
   .link-group {
     display: flex;
-    -moz-display: flex;
     align-items: center;
-    -moz-align-items: center;
     flex-direction: column;
     height: 25%;
-    -moz-height: 25%;
     justify-content: space-between;
     &::before {
       content: '';
       background-image: url('./img/hero-bot.svg');
       background-size: 100% 100%;
-      @include svg-wrapper;
+      position: absolute;
+  display: block;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
       height: 100%;
       width: 55%;
     }
@@ -326,11 +345,13 @@
       height: 25%;
     }
     .logo {
-      @include flex-centering;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
        width: 40%;
        position: absolute;
-       right: 15%;
+       right: 16%;
       }
          &::before {
          content: '';
@@ -340,7 +361,7 @@
          display: block;
          width: 55%; 
          top: 0;
-         left:2px;
+         left: 0;
          right: 0;
          bottom: 10%;
          margin: auto;
@@ -413,7 +434,7 @@
     }
     .vertical-scrolling .hero {
       flex-direction: column;
-      padding-top: 80px;
+      padding-top: 0;
     }
     .link_contact {
       font-size: 1em;
