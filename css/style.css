@@ -381,6 +381,30 @@ h3 {
 /* MQ STYLES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 767px) {
+  .vertical-scrolling .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .vertical-scrolling .hero::before {
+    content: '';
+    background-image: url("./img/hero-intro-responsie.svg");
+    background-size: 100% 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    width: 55%;
+  }
   .link-group {
     height: 25%;
   }

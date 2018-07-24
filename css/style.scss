@@ -183,12 +183,12 @@
       background-image: url('./img/hero-center.svg');
       background-size: 100% 100%;
       position: absolute;
-  display: block; 
-  top: 0;
-  left:0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+      display: block; 
+      top: 0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       height: 100%;
       width: 55%;
     }
@@ -342,6 +342,25 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   
   @media screen and (max-width: 767px) {
+    .vertical-scrolling .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      &::before {
+        content: '';
+        background-image: url('./img/hero-intro-responsie.svg');
+        background-size: 100% 100%;
+        position: absolute;
+        display: block; 
+        top: 0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 100%;
+        width: 55%;
+      }
+    }
     .link-group {
       height: 25%;
     }
@@ -408,6 +427,7 @@
   }
   
   @media screen and (max-width: 320px) {
+ 
     .widget_nav_menu .menu .menu-item span {
       font-size: 1em;
       margin-left: 0;
