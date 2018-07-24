@@ -164,9 +164,9 @@ h3 {
 }
 
 .logo img {
-  width: 30%;
-  position: absolute;
-  right: 24%;
+  width: 20%;
+  margin: 0 auto;
+  padding-left: 15%;
 }
 
 .logo::before {
@@ -274,6 +274,7 @@ h3 {
   padding: 1.5em;
   width: 200px;
   font-size: 1em;
+  border-radius: 5px;
   border: 1px solid white;
 }
 
@@ -395,9 +396,7 @@ h3 {
             align-items: center;
   }
   .logo img {
-    width: 40%;
     position: absolute;
-    right: 16%;
   }
   .logo::before {
     content: '';
@@ -455,9 +454,6 @@ h3 {
 }
 
 @media screen and (max-width: 320px) {
-  #fullpage .logo-head .logo img {
-    width: 70%;
-  }
   .widget_nav_menu .menu .menu-item span {
     font-size: 1em;
     margin-left: 0;
@@ -525,6 +521,7 @@ h3 {
   top: 0;
   left: 0;
   right: 0;
+  border-radius: 5px;
   bottom: 0;
   background: #E41513;
   -webkit-transform: scaleX(0);
