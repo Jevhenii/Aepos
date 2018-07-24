@@ -3,5 +3,5 @@ viewBox="0 0 1000 1000"
 version="1.1" xmlns="http://www.w3.org/2000/svg" 
 height="60%" width="100%"
 preserveAspectRatio="none">
-  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="620" x2="500" y2="967" style="stroke:rgb(255,255,255);stroke-width:1"></line>
+  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="550" x2="500" y2="967" style="stroke:rgb(255,255,255);stroke-width:1"></line>
 </svg>
