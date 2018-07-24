@@ -130,7 +130,7 @@ section {
 .vertical-scrolling .description .description_text {
   text-transform: none;
   font-family: 'Roboto Mono', monospace;
-  text-align: center;
+  text-align: left;
   text-transform: none;
   font-size: 1.5em;
   padding: 5px;
