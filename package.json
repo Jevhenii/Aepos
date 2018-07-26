@@ -10,6 +10,7 @@
   "license": "OPEN-SOURCE-GPLV3-LICENSE",
   "dependencies": {
     "animate.css": "^3.6.1",
+    "fullpage": "^1.4.2",
     "fullpage.js": "^3.0.1",
     "hover.css": "^2.3.2",
     "wow.js": "^1.2.2"
