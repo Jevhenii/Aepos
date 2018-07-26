@@ -215,21 +215,7 @@
   .helper {
     margin: 17em 0;
   }
-  @-moz-document url-prefix() {
-    .link-group {
-      height: 14em;
-    }
-    footer img {
-      position: absolute;
-      width: 10%;
-      bottom: 60px;
-      z-index: 10;
-      top: -25px;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-  }
+
   .link-group {
     display: flex;
     align-items: center;
