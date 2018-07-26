@@ -79,4 +79,7 @@ $(window).on('load',function(){
   $('#btn').click(function(){
     fullpage_api.moveSectionUp();
   });
+  $('#footer-logo').click(function(){
+    fullpage_api.moveSectionUp();
+  });
  })
