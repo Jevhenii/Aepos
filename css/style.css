@@ -242,22 +242,6 @@ h3 {
   margin: 17em 0;
 }
 
-@-moz-document url-prefix() {
-  .link-group {
-    height: 14em;
-  }
-  footer img {
-    position: absolute;
-    width: 10%;
-    bottom: 60px;
-    z-index: 10;
-    top: -25px;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-}
-
 .link-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,10 +290,10 @@ footer {
 
 footer img {
   position: absolute;
+  padding-bottom: 1.6666rem;
   width: 10%;
-  bottom: 60px;
   z-index: 10;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
@@ -434,10 +418,10 @@ footer #btn:hover {
 @media screen and (max-width: 767px) {
   footer img {
     position: absolute;
-    width: 25%;
-    bottom: 60px;
+    padding-bottom: 1.6666rem;
+    width: 20%;
     z-index: 10;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
