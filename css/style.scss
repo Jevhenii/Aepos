@@ -215,7 +215,21 @@
   .helper {
     margin: 17em 0;
   }
-  
+  @-moz-document url-prefix() {
+    .link-group {
+      height: 14em;
+    }
+    footer img {
+      position: absolute;
+      width: 10%;
+      bottom: 60px;
+      z-index: 10;
+      top: -25px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
   .link-group {
     display: flex;
     align-items: center;
@@ -368,6 +382,16 @@
     }
   }
   @media screen and (max-width: 767px) {
+    footer img {
+      position: absolute;
+      width: 25%;
+      bottom: 60px;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
     .vertical-scrolling .hero {
       display: flex;
       align-items: center;
@@ -450,7 +474,9 @@
   }
   
   @media screen and (max-width: 320px) {
- 
+    footer img {
+      width: 25%;
+    }
     .widget_nav_menu .menu .menu-item span {
       font-size: 1em;
       margin-left: 0;
