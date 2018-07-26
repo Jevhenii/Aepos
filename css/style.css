@@ -253,7 +253,6 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 25%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -282,18 +281,29 @@ h3 {
   border: 1px solid white;
 }
 
+footer {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+}
+
 footer img {
   position: absolute;
   width: 10%;
-  bottom: 20px;
+  bottom: 60px;
   z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 footer #btn {
   z-index: 10;
   position: absolute;
   bottom: 20px;
-  left: 50px;
+  left: 3em;
   cursor: pointer;
   font-size: 1.5em;
   color: #ffffff;
@@ -429,9 +439,6 @@ footer #btn:hover {
     margin: auto;
     height: 100%;
     width: 55%;
-  }
-  .link-group {
-    height: 25%;
   }
   .logo {
     display: -webkit-box;

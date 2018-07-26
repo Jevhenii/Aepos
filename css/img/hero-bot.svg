@@ -3,6 +3,6 @@ viewBox="0 0 1000 1000"
 version="1.1" xmlns="http://www.w3.org/2000/svg" 
 height="100%" width="100%"
 preserveAspectRatio="none">
-  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="0" x2="500" y2="370" style="stroke:rgb(255,255,255);stroke-width:1"></line>
-  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="440" x2="500" y2="560" style="stroke:rgb(255,255,255);stroke-width:1"></line>
+  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="0" x2="500" y2="410" style="stroke:rgb(255,255,255);stroke-width:1"></line>
+  <line stroke-dasharray="5, 5, 1, 5" x1="500" y1="470" x2="500" y2="532" style="stroke:rgb(255,255,255);stroke-width:1"></line>
 </svg>
