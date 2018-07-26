@@ -6,8 +6,6 @@
     max-width: 100%;
     height: auto;
   }
-  
-  
   .icon-up-open-big {
     &:after {
       content: "^";
@@ -154,8 +152,8 @@
   align-items: center;
    img {
     width: 20%;
-    margin: 0 auto;
-    padding-left: 15%;
+    // margin: 0 auto;
+    padding-left: 14.8%;
    }
       &::before {
       content: '';
@@ -201,18 +199,18 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   #main-banner {
     max-width: 100%;
-    width: 300px;
+    width: 20%;
     height: auto;
     position: relative;
-    padding-right: 8px;
-    padding-top: 60px;
+    padding-top: 3%;
+    padding-right: 0.88888em
   }
   
   .helper {
-    margin: 130px 0;
+    margin: 17em 0;
   }
   
   .link-group {
@@ -250,6 +248,7 @@
   height: auto;
   display: flex;
   justify-content: center;
+  position: absolute;
  img {
   position: absolute;
   width: 10%;
@@ -546,4 +545,14 @@
     right: 0;
   }
 
-  
+  #btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ffffff;
+      &:hover {
+        color:#E41513; 
+      }
+  }

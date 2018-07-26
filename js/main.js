@@ -1,33 +1,31 @@
 
-// variables
-var $header_top = $('.header-top');
-var $nav = $('nav');
 
-// toggle menu 
-$header_top.find('a').on('click', function() {
-  $(this).parent().toggleClass('open-menu');
-});
 
-  var $isAnimatedSecond = $('.second .is-animated');
 
 // fullpage customization
 $('#fullpage').fullpage({
   licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
   sectionsColor: ['#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A', '#0C090A'],
   sectionSelector: '.vertical-scrolling',
+  // slideSelector: '.horizontal-scrolling',
   navigation: true,
   slidesNavigation: true,
-  controlArrows: true,
-  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixSection'],
+  controlArrows: false,
+  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection',"sixSection"],
   menu: '#menu',
 
+  // afterLoad: function(anchorLink, index) {
+  //   $header_top.css('background', 'rgba(0, 47, 77, .3)');
+  //   $nav.css('background', 'rgba(0, 47, 77, .25)');
+  //   if (index == 5) {
+  //       $('#fp-nav').hide();
+  //     }
+  // },
 
-  afterLoad: function(anchorLink, index) {
-    $header_top.css('background', '#9E2F41');
-    $nav.css('background', 'rgba(0, 47, 77, .25)');
-    if (index == 5) {
-        $('#fp-nav').hide();
-      }
+  onLeave: function(index, nextIndex, direction) {
+    if(index == 5) {
+      $('#fp-nav').show();
+    }
   },
 
   afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
@@ -55,7 +53,7 @@ $('#fullpage').fullpage({
       $nav.css('background', 'rgba(0, 47, 77, .25)');
     }
   } 
-});
+}); 
 
 $(document).ready(function() {
   menu_link = $('.widget_nav_menu .menu .menu-item-has-children a'),
@@ -77,6 +75,8 @@ $(document).ready(function() {
 
 });
 
-
-  
-
+$(window).on('load',function(){
+  $('#btn').click(function(){
+    fullpage_api.moveSectionUp();
+  });
+ })

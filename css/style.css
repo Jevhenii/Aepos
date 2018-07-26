@@ -165,8 +165,7 @@ h3 {
 
 .logo img {
   width: 20%;
-  margin: 0 auto;
-  padding-left: 15%;
+  padding-left: 14.8%;
 }
 
 .logo::before {
@@ -227,15 +226,15 @@ h3 {
 
 #main-banner {
   max-width: 100%;
-  width: 300px;
+  width: 20%;
   height: auto;
   position: relative;
-  padding-right: 8px;
-  padding-top: 60px;
+  padding-top: 3%;
+  padding-right: 0.88888em;
 }
 
 .helper {
-  margin: 130px 0;
+  margin: 17em 0;
 }
 
 .link-group {
@@ -287,6 +286,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
 }
 
 #fullpage footer img {
@@ -607,5 +607,18 @@ h3 {
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
+}
+
+#btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+#btn:hover {
+  color: #E41513;
 }
 /*# sourceMappingURL=style.css.map */
