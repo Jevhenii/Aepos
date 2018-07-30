@@ -83,3 +83,13 @@ $(window).on('load',function(){
     fullpage_api.moveSectionUp();
   });
  })
+
+
+
+
+function myFunction() {
+   var els = document.querySelectorAll('.class');
+for (var i = 0; i < els.length; i++) {
+    els[i].setAttribute("class", "democlass");
+}
+}
