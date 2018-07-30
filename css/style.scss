@@ -252,14 +252,12 @@
   }
 
    footer img {
-      position: absolute;
-      padding-bottom: 1.6666rem;
-      width: 10%;
       z-index: 10;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
+      position: absolute;
+      width: 10%;
+      bottom: 17px;
+      left: 45%;
+      right: 35%;
     }
     footer #btn {
       z-index: 10;
