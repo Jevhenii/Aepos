@@ -180,21 +180,25 @@
     }
   }
 .team-wrapper {
+    height: 100%;
+    width: 100%; 
     background-image: url('./img/hero-bot.svg');
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
   .link-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    height: 130px;
+    max-height: 100%;
+    height: 18%;
       .link_contact {
         padding: 1.5em;
         width: 200px;
         font-size: 1em;
         border-radius: 5px;
         border: 1px solid white;
+        cursor: pointer;
       }
   }
 }
