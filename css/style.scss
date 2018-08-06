@@ -109,6 +109,8 @@
     &::before {
       content: '';
       background-image: url('./img/hero-top.svg');
+      background-position: center;
+      background-repeat: no-repeat;
       position: absolute;
       top: 0;
       left:0;
@@ -153,6 +155,8 @@
       &::before {
       content: '';
       background-image: url('./img/hero-intro.svg');
+      background-position: center;
+      background-repeat: no-repeat;
       position: absolute;
       top: 0;
       left: 0;
@@ -170,7 +174,8 @@
     margin: 0 auto;
     height: 100%;
     background-image: url('./img/hero-center.svg');
-    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
       .banner {
         width: 30%;
         padding-top: 50px;
@@ -196,6 +201,8 @@
       content: '';
       background-image: url('./img/hero-bot.svg');
       position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
       top: 0;
       left:0;
       right: 0;
@@ -354,8 +361,9 @@
          &::before {
          content: '';
          background-image: url('./img/hero-intro.svg');
+         background-position: center;
+         background-repeat: no-repeat;
          position: absolute;
-         display: block;
          top: 0;
          left: 0;
          right: 0;
@@ -375,13 +383,6 @@
     .vertical-scrolling .hero {
       flex-direction: column;
       padding-top: 0;
-    }
-    .link_contact {
-      font-size: 1em;
-      width: 150px;
-    }
-    .helper {
-      margin: 15px 0;
     }
     .widget_nav_menu .menu .menu-item span {
       font-size: 1em;
@@ -429,9 +430,6 @@
     .vertical-scrolling .hero {
       flex-direction: column;
       padding-top: 0;
-    }
-    .helper {
-      margin: 15px 0;
     }
     nav li a {
       padding: 3px;
