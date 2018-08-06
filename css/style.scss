@@ -109,16 +109,12 @@
     &::before {
       content: '';
       background-image: url('./img/hero-top.svg');
-      background-size: 100% 100%;
       position: absolute;
-      display: block;
       top: 0;
       left:0;
       right: 0;
       bottom: 0;
       margin: auto;
-      height: 110%;
-      width: 100%;
     }  
     .description_text {
       text-transform: none;
@@ -152,68 +148,42 @@
   align-items: center;
    img {
     width: 20%;
-    // margin: 0 auto;
     padding-left: 14.8%;
    }
       &::before {
       content: '';
       background-image: url('./img/hero-intro.svg');
-      background-size: 100% 100%;
       position: absolute;
-      display: block;
-      width: 55%; 
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       margin: auto;
-      height: 100%;
-      width: 55%;
-      }
+    }
   }
   
   .vertical-scrolling .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-      img {
-        margin: 0 27em;
-      }
-    &::before {
-      content: '';
-      background-image: url('./img/hero-center.svg');
-      background-size: 100% 100%;
-      position: absolute;
-      display: block; 
-      top: 0;
-      left:0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      height: 100%;
-      width: 55%;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    background-image: url('./img/hero-center.svg');
+    background-position: center center;
+      .banner {
+        width: 30%;
+        padding-top: 50px;
+      }   
+    .hero-descr_wrapper {
+      justify-content: space-between;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
     }
     .hero-descr_wrapper .description_text {
       font-size: 1.2em;
     }
-  }
-  
-  .hero-descr_wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #main-banner {
-    max-width: 100%;
-    width: 20%;
-    height: auto;
-    position: relative;
-    padding-top: 3%;
-    padding-right: 0.88888em
-  }
-  
-  .helper {
-    margin: 17em 0;
   }
 
   .link-group {
@@ -221,19 +191,16 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    height: 140px;
     &::before {
       content: '';
       background-image: url('./img/hero-bot.svg');
-      background-size: 100% 100%;
       position: absolute;
-      display: block;
       top: 0;
       left:0;
       right: 0;
       bottom: 0;
       margin: auto;
-      height: 100%;
-      width: 55%;
     }
   }
   
@@ -355,17 +322,15 @@
   
   /* MQ STYLES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  @media screen and (max-width: 1034px) {
-    .vertical-scrolling .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-        img {
-          margin: 0 15em;
-        }
+  @media screen and (max-width: 1100px) {
+    .banner {
+      padding-right: 0.88888%;
     }
   }
   @media screen and (max-width: 767px) {
+    .vertical-scrolling .hero .hero-descr_wrapper {
+      justify-content: space-around;
+    }
     footer img {
       position: absolute;
       padding-bottom: 1.6666rem;
@@ -379,43 +344,22 @@
     .vertical-scrolling .hero {
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      &::before {
-        content: '';
-        background-image: url('./img/hero-intro-responsie.svg');
-        background-size: 100% 100%;
-        position: absolute;
-        display: block; 
-        top: 0;
-        left:0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        height: 100%;
-        width: 55%;
-      }
+      justify-content: space-between;
+      background-image: none;
     }
     .logo {
       display: flex;
       justify-content: center;
       align-items: center;
-      img {
-       position: absolute;
-      }
          &::before {
          content: '';
          background-image: url('./img/hero-intro.svg');
-         background-size: 100% 100%;
          position: absolute;
          display: block;
-         width: 55%; 
          top: 0;
          left: 0;
          right: 0;
-         bottom: 10%;
          margin: auto;
-         height: 100%;
-         width: 55%;
          }
      }
     nav ul {
@@ -436,11 +380,6 @@
       font-size: 1em;
       width: 150px;
     }
-    #main-banner {
-      width: 100px;
-      padding: 30px 0;
-      right: -3px;
-    }
     .helper {
       margin: 15px 0;
     }
@@ -456,7 +395,14 @@
     }
 
   }
-  
+  .widget_nav_menu .menu .sub-menu a {
+    text-transform: none;
+    font-size: 1.333em;
+  }
+  .widget_nav_menu .menu .menu-item span {
+    text-transform: none;
+    font-size: 1.5555em;
+  }
   @media screen and (max-width: 320px) {
     footer img {
       width: 25%;
@@ -483,14 +429,6 @@
     .vertical-scrolling .hero {
       flex-direction: column;
       padding-top: 0;
-    }
-    .link_contact {
-      font-size: 1em;
-      width: 150px;
-    }
-    #main-banner {
-      width: 100px;
-      padding: 30px 0;
     }
     .helper {
       margin: 15px 0;

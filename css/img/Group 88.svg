@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 944.812 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 0 1150 400">
   <defs>
     <style>
       .cls-1, .cls-2 {
@@ -7,7 +7,7 @@
 
       .cls-1 {
         font-size: 104px;
-        font-family: FuturaPT-Demi, Futura PT;
+        font-family: 'Roboto Mono', monospace;
         font-weight: 300;
       }
 
