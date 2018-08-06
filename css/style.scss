@@ -105,19 +105,13 @@
   .vertical-scrolling .description { 
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     align-items: center;
-    &::before {
-      content: '';
-      background-image: url('./img/hero-top.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 0;
-      left:0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-    }  
+    background-image: url('./img/hero-top.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     .description_text {
       text-transform: none;
       font-family: 'Roboto Mono', monospace;
@@ -146,24 +140,18 @@
   
  .logo {
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
+  background-image: url('./img/hero-intro.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
    img {
     width: 20%;
-    padding-left: 14.8%;
+    padding-left: 14.9%;
    }
-      &::before {
-      content: '';
-      background-image: url('./img/hero-intro.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-    }
   }
   
   .vertical-scrolling .hero {
@@ -174,8 +162,9 @@
     margin: 0 auto;
     height: 100%;
     background-image: url('./img/hero-center.svg');
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
       .banner {
         width: 30%;
         padding-top: 50px;
@@ -190,34 +179,25 @@
       font-size: 1.2em;
     }
   }
-
+.team-wrapper {
+    background-image: url('./img/hero-bot.svg');
+    background-position: center;
+    background-repeat: no-repeat; 
   .link-group {
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: space-between;
-    height: 140px;
-    &::before {
-      content: '';
-      background-image: url('./img/hero-bot.svg');
-      position: absolute;
-      background-position: center;
-      background-repeat: no-repeat;
-      top: 0;
-      left:0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-    }
+    flex-direction: column;
+    height: 130px;
+      .link_contact {
+        padding: 1.5em;
+        width: 200px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid white;
+      }
   }
-  
-  .link_contact {
-    padding: 1.5em;
-    width: 200px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid white;
-  }
+}
   footer {
     position: absolute;
     z-index: 10;
@@ -281,6 +261,7 @@
             display: block;
             float: left;
             font-size: 1em;
+            padding-top: 5px;
           }
           &.active::after {
             content: "-";
@@ -361,8 +342,9 @@
          &::before {
          content: '';
          background-image: url('./img/hero-intro.svg');
-         background-position: center;
+         background-position: center center;
          background-repeat: no-repeat;
+         background-size: 100% 100%;
          position: absolute;
          top: 0;
          left: 0;
