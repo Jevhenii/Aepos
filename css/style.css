@@ -490,6 +490,12 @@ footer #btn:hover {
   }
 }
 
+@media screen and (min-width: 1710px) {
+  #main-banner {
+    padding-left: 0.8888%;
+  }
+}
+
 /*hover*/
 .hvr-bounce-to-right {
   display: inline-block;
